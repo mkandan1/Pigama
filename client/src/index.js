@@ -5,18 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MobileViewRestriction from './components/MobileViewRestriction';
 
-function CheckScreen(props) {
-  const screen = window.screen.width;
-  if (screen <= 479) {
-    return <MobileViewRestriction />
-  } else {
-    return <App />
-  }
-}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CheckScreen/>
+    <App />
   </React.StrictMode>
 );
 
