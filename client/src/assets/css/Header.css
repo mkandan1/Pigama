@@ -1,0 +1,13 @@
+.list-group-own{
+    list-style: none;
+    display: flex;
+    margin-top: 0 !important;
+}
+
+.list-group-item-own, .list-group-item-own > a{
+    padding-left: 30px;
+    text-decoration: none;
+    color: #000;
+    font-size: .9rem;
+    font-weight: 500;
+}

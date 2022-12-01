@@ -1,0 +1,23 @@
+
+.intro-container {
+    border-radius: 2rem;
+    background-color: #D3155F;
+    color: #fff;
+}
+
+.intro-container > h1 {
+    
+    font-size: 2rem;
+}
+
+.left-content-heading {
+    font-weight: 700;
+}
+
+.left-content-subtext{
+    font-size: 1rem;
+    font-weight: 400;
+    /* margin-top: 1rem; */
+}
+
+/* Responsive font */

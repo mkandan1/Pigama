@@ -1,0 +1,19 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    color: #000;
+}
+
+
+.btn--large{
+    color: #fff;
+    padding: .6rem 2rem;
+    font-size: .9rem;
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
