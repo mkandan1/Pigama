@@ -3,20 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './assets/css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MobileViewRestriction from './components/MobileViewRestriction';
 
-function CheckScreen(props) {
-  const screen = window.screen.width;
-  if (screen <= 479) {
-    return <MobileViewRestriction />
-  } else {
-    return <App />
-  }
-}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9cf182083c89ee5399b21b9bd84bcd8a57d704bb
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CheckScreen/>
+    <App />
   </React.StrictMode>
 );
 

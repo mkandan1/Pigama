@@ -3,7 +3,7 @@
 }
 
 .nav-link {
-    color: #000;
+    color: #070D43;
 }
 
 
@@ -16,4 +16,8 @@
 .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
+}
+
+.fs-7 {
+    font-size: .85rem;
 }
