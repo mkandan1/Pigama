@@ -17,7 +17,62 @@
 .left-content-subtext{
     font-size: 1rem;
     font-weight: 400;
+    font-family: 'Didact Gothic', sans-serif;
     /* margin-top: 1rem; */
 }
 
-/* Responsive font */
+.section__title {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700;
+}
+
+.steps__number {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #24D315;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.steps__number > span {
+    position: absolute;
+    align-self: center;
+    color: #fff;
+}
+
+.step__title {
+    font-size:  1rem;
+    font-weight: 700;
+}
+
+.step__description {
+    color: #434343;
+    font-family: 'Didact Gothic';
+}
+
+.articles__label {
+    background-color: #1AA9E8;
+    color: #FFF;
+    padding: 5px 12px;
+    font-size: .8rem;
+    border-radius: .4rem;
+}
+.artciles__title {
+    font-weight: 600;
+    line-height: 2.4rem;
+}
+
+.articles__description {
+    color: #434343;
+    line-height: 1.7rem;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .intro-container{
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    }
+  }

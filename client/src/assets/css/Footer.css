@@ -1,0 +1,37 @@
+.footer {
+    background-color: #070D43;
+}
+
+.org__description {
+    color: #fff;
+    font-weight: 300;
+    font-size: .86rem;
+    line-height: 1.4rem;
+}
+
+.footer__title {
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer_links{
+    list-style: none;
+    padding: 0;
+}
+
+.footer__link > a{
+    text-decoration: none;
+    color: #D0D0D0;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.line {
+    color: #fff;
+    background-color: #fff;
+}
+
+.copyright__content {
+    color: #fff;
+    font-size: .8rem;
+}
