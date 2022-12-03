@@ -3,7 +3,7 @@ import '../../assets/css/Footer.css';
 //Logo
 import logo_white from '../../assets/images/Logo_white.png'
 
-export class Footer extends Component {
+class Footer extends Component {
   render() {
     return (
       <div className='footer p-5 pb-4'>
