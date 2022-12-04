@@ -31,10 +31,15 @@ const firebaseConfig = {
 const FirebaseInitialize = initializeApp(firebaseConfig)
 
 
+
 app.get('/test', (req, res) => {
     res.send(JSON.stringify({ 'name': 'Hello, World!' }))
 })
 
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 
 
 app.listen(port, () => {
