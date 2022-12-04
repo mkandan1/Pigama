@@ -34,7 +34,7 @@ app.use(express.static(path.resolve(__dirname, 'client', 'build')));
 
 
 app.get('/test', (req, res) => {
-    res.send(JSON.stringify({ 'name': 'Hello, World!' }))
+    res.json({ 'name': 'Hello, World!' })
 })
 
 
