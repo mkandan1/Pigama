@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 import dotenv from 'dotenv';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -29,7 +30,7 @@ const firebaseConfig = {
 };
 
 const FirebaseInitialize = initializeApp(firebaseConfig)
-
+app.use(express.static(path.resolve(__dirname, 'client', 'build')));
 
 
 app.get('/test', (req, res) => {
