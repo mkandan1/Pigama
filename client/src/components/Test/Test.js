@@ -7,7 +7,7 @@ class Test extends Component {
     }
     
     callAPI () {
-        fetch("http://localhost:8800/test")
+        fetch("/test")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }));
     }
