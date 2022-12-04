@@ -1,11 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import admin from 'firebase-admin';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { initializeApp } from 'firebase/app';
-import { getDatabase } from "firebase-admin/database";
-import { getAuth, UserRecord } from 'firebase-admin/auth'
-
 const app = express();
 dotenv.config();
 
@@ -15,6 +13,8 @@ app.use(cors({
 
 const port = 8800;
 app.use(express.json());
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 
 const firebaseConfig = {
