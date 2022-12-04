@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../assets/css/Footer.css';
+import {Link} from 'react-router-dom'
 //Logo
 import logo_white from '../../assets/images/Logo_white.png'
 
@@ -15,17 +16,19 @@ class Footer extends Component {
             <div className='col-12 col-lg-3'>
                 <span className='footer__title'>Organization</span>
                 <ul className='mt-2 footer_links'>
-                    <li className='footer__link'><a href=''>Home</a></li>
-                    <li className='footer__link'><a href=''>Trendings</a></li>
-                    <li className='footer__link'><a href=''>Contact Us</a></li>
-                    <li className='footer__link'><a href=''>Sign Up</a></li>
+                    <li className='footer__link'><Link to='/'>Home</Link></li>
+                    <li className='footer__link'><Link to='/trendings'>Trendings</Link></li>
+                    <li className='footer__link'><Link to='/contact-us'>Contact Us</Link></li>
+                    <li className='footer__link'><Link to='/Oauth/Signup'>Sign Up</Link></li>
+                    <li className='footer__link'><Link to='/test'>Test</Link></li>
+                
                 </ul>
             </div>
             <div className='col-12 col-lg-3'>
                 <span className='footer__title'>Others</span>
                 <ul className='mt-2 footer_links'>
-                    <li className='footer__link'><a href=''>Privacy</a></li>
-                    <li className='footer__link'><a href=''>Terms & Condition</a></li>
+                    <li className='footer__link'><Link to='/pigama/privacy'>Privacy</Link></li>
+                    <li className='footer__link'><Link to='/pigama/terms'>Terms & Condition</Link></li>
                 </ul>
             </div>
         </div>

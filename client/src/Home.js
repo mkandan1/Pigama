@@ -4,12 +4,16 @@ import bg_hero from './components/Home/bg_hero.png'
 import article_1 from './components/Home/Article_1.png';
 import article_2 from './components/Home/Article_2.png';
 import Footer from './components/essentials/Footer';
+import Header from './components/essentials/Header';
+import {Link} from 'react-router-dom'
 
 
 class Home extends Component {
     render() {
         return (
             <div className='HomePage'>
+                
+            <Header/>
 
                 <div className='container'>
 
@@ -20,7 +24,7 @@ class Home extends Component {
                                 <h1 className='left-content-heading'>Earn money by reading our articles for few hours</h1>
                                 <p className='left-content-subtext mt-4'>Want to earn money online? you’re at right place to earn. By using our platform for few hours per day you can earn decend money</p>
                                 <div className='d-flex d-lg-block justify-content-center'>
-                                    <button className='btn btn-warning btn--large mt-3 mt-lg-2 mb-5'>Sign Up</button>
+                                    <Link to="/Oauth/Signup" className='btn btn-warning btn--large mt-3 mt-lg-2 mb-5'>Sign Up</Link>
                                 </div>
                             </div>
                             <div className='col-12 col-lg-6 ps-5 mt-3 mt-lg-4 d-flex d-lg-block justify-content-center'>
@@ -45,7 +49,7 @@ class Home extends Component {
                                     <span>1</span>
                                 </div>
                                 <h3 className='step__title mt-4'>Create an Account</h3>
-                                <button className='btn btn-warning mt-3'>Sign Up</button>
+                                <Link to="/Oauth/Signup" className='btn btn-warning mt-3'>Sign Up</Link>
                             </div>
                             {/* Step 2 */}
                             <div className='d-flex flex-column align-items-center mt-5 mt-md-4 mt-lg-0 col-6 text-center col-md-6 col-lg-2 align-self-center align-self-lg-start'>
