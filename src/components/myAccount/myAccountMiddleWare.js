@@ -9,7 +9,7 @@ function MyAccountMiddleWare() {
     return(
        <>
         {
-            OauthState ? <MyAccount/> : <p>You don't have access. Login <Link to='/Oauth/Login'>here</Link></p>
+            OauthState ? <MyAccount/> : <p>You don't have access. Login <Link to='/Oauth/login'>here</Link></p>
         }
         </>
     )

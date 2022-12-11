@@ -16,6 +16,26 @@ import Ad from './components/Trendings/Ad/Ad';
 import NativeAd from './components/Trendings/Ad/NavtiveAd/NativeAd';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { authState: false, uid: "" };
+}
+
+
+fetchUid() {
+    const auth = getAuth(config)
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            this.setState({
+                authState: true,
+                uid: user.uid
+            })
+        }
+    })
+}
+componentWillMount() {
+    this.fetchUid()
+}
   render() {
     return (
        <Router>
@@ -26,7 +46,7 @@ class App extends Component {
                  <Route path='/Oauth/Signup' element={< SignUpMiddleWare />}></Route>
                  <Route path='/trendings' element={< Trendings />}></Route>
                  <Route path='/forgetPassword' element={<ForgetPassword/>}></Route>
-                 <Route path='/myAccount/:uid' element={<MyAccountMiddleWare/>}></Route>
+                 <Route path={`/myAccount/${this.state.uid}`} element={<MyAccountMiddleWare/>}></Route>
                  <Route path='/pigama/terms' element={< Terms />}></Route>
                  <Route path='/article/video-editing-beginners' element={< VideoEditing/>}></Route>
                  <Route path='/test' element={< Test />}></Route>
