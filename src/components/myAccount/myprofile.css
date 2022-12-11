@@ -1,0 +1,14 @@
+.profile__card{
+    box-shadow: 0.1px 0.1px 1px 1px #cccccc;
+    margin: 10px;
+    background-color: #fff;
+}
+
+#user__profile {
+    width: 5rem;
+    height: 5rem;
+}
+
+#user__profile > img {
+    border-radius: 50px !important;
+}

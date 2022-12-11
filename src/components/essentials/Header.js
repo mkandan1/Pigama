@@ -1,20 +1,37 @@
 import React, { Component } from "react";
 import '../../assets/css/Header.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import config from './../../config';
+
 
 //Logo
 import logo from '../../assets/images/Logo.png'
 
 class Header extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = { authState: false, uid: "" };
+    }
 
-        this.state = {
-            isLoggedIn: false,
-        }
+
+    fetchUid() {
+        const auth = getAuth(config)
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                this.setState({
+                    authState: true,
+                    uid: user.uid
+                })
+            }
+        })
+    }
+    componentWillMount() {
+        this.fetchUid()
     }
 
     render() {
+
         return (
             <nav className="container navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
@@ -37,7 +54,7 @@ class Header extends Component {
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link btn btn-warning ps-3 pe-3 fs-7" to={this.state.isLoggedIn ? "/articles": "/Oauth/login"}>{this.state.isLoggedIn ? 'Go to Articles' : 'Login | Sign Up'}</Link>
+                                <Link className="nav-link btn btn-warning ps-3 pe-3 fs-7" to={this.state.authState ? `/myAccount/${this.state.uid}` : "/Oauth/login" }>{this.state.authState ? 'My Account' : 'Login | Sign Up'}</Link>
                             </li>
                         </ul>
                     </div>
