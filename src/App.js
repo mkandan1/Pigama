@@ -13,6 +13,8 @@ import SignUpMiddleWare from './components/Oauth/Singup/SignUpMiddleWare';
 import ForgetPassword from './components/Oauth/Login/ForgetPassword';
 import MyAccountMiddleWare from './components/myAccount/myAccountMiddleWare';
 import Ad from './components/Trendings/Ad/Ad';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import config from './config';
 import NativeAd from './components/Trendings/Ad/NavtiveAd/NativeAd';
 
 class App extends Component {
