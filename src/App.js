@@ -22,7 +22,7 @@ class App extends Component {
            <div className="App">
            <Routes>
                  <Route exact path='/' element={< Home />}></Route>
-                 <Route path='/Oauth/Login' element={< Login />}></Route>
+                 <Route path='/Oauth/login' element={< Login />}></Route>
                  <Route path='/Oauth/Signup' element={< SignUpMiddleWare />}></Route>
                  <Route path='/trendings' element={< Trendings />}></Route>
                  <Route path='/forgetPassword' element={<ForgetPassword/>}></Route>
