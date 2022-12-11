@@ -8,7 +8,7 @@ import config from '../../config';
 function logOut() {
   const auth = getAuth(config);
   signOut(auth).then(() => {
-    window.location.href = '/Oauth/Login'
+    window.location.href = '/Oauth/login'
   }).catch((error) => {
     // An error happened.
   });
