@@ -17,7 +17,7 @@ function signIn() {
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
     const uid = userCredential.user.uid;
 
-    window.location.href = `/myAccount/${uid}`
+    window.location.href = `/`
   })
     .catch((error) => {
 
