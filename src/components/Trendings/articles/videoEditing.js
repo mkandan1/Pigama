@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 class VideoEditing extends Component {
     state = {
-        countFromSecond: 4,
+        countFromSecond: 7,
         timerId: 0,
         status: 'Start',
         ad1: false,
@@ -84,7 +84,7 @@ class VideoEditing extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 4,
+                        countFromSecond: 7,
                         timerId: 0,
                         ad1: true
                     })
@@ -110,7 +110,7 @@ class VideoEditing extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 4,
+                        countFromSecond: 7,
                         timerId: 0,
                         ad2: true
                     })
@@ -136,7 +136,7 @@ class VideoEditing extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 4,
+                        countFromSecond: 7,
                         timerId: 0,
                         ad3: true
                     })
@@ -163,7 +163,7 @@ class VideoEditing extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 4,
+                        countFromSecond: 7,
                         timerId: 0,
                         ad4: true
                     })
@@ -189,7 +189,7 @@ class VideoEditing extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 4,
+                        countFromSecond: 7,
                         timerId: 0,
                         ad5: true
                     })
@@ -215,7 +215,7 @@ class VideoEditing extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 4,
+                        countFromSecond: 7,
                         timerId: 0,
                         ad6: true
                     })
