@@ -13,6 +13,7 @@ import SignUpMiddleWare from './components/Oauth/Singup/SignUpMiddleWare';
 import ForgetPassword from './components/Oauth/Login/ForgetPassword';
 import MyAccountMiddleWare from './components/myAccount/myAccountMiddleWare';
 import Ad from './components/Trendings/Ad/Ad';
+import NativeAd from './components/Trendings/Ad/NavtiveAd/NativeAd';
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
                  <Route path='/article/video-editing-beginners' element={< VideoEditing/>}></Route>
                  <Route path='/test' element={< Test />}></Route>
                  <Route path='/ad' element={<Ad/>}></Route>
+                 <Route path='/nativead' element={<NativeAd/>}></Route>
                  <Route path='/pigama/privacy' element={< Privacy />}></Route>
           </Routes>
           </div>

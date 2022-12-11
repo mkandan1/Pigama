@@ -6,9 +6,6 @@ import { Link } from 'react-router-dom';
 
 
 
-
-
-
 class VideoEditing extends Component {
     state = {
         countFromSecond: 7,
@@ -28,18 +25,20 @@ class VideoEditing extends Component {
         this.creditAmount = this.creditAmount.bind(this)
     }
 
-    componentWillMount(){
+    componentWillMount() {
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
-            const uid = user.uid;
-            this.setState({
-                uid: uid
-            })
+            if (user) {
+                const uid = user.uid;
+                this.setState({
+                    uid: uid
+                })
+            }
         })
     }
 
     creditAmount(ad1, ad2, ad3, ad4, ad5, ad6) {
-        if(ad1 === false || ad2 === false || ad3 === false || ad4 === false || ad5 === false || ad6 === false){
+        if (ad1 === false || ad2 === false || ad3 === false || ad4 === false || ad5 === false || ad6 === false) {
             return
         }
         const auth = getAuth(config);
@@ -47,7 +46,7 @@ class VideoEditing extends Component {
             const uid = user.uid;
             const creditAmount = 0.05
 
-            const data = {uid: uid, creditAmount: creditAmount}
+            const data = { uid: uid, creditAmount: creditAmount }
 
             fetch(`${process.env.REACT_APP_API_LINK}/updateBalance`, {
                 method: 'POST',
@@ -55,14 +54,14 @@ class VideoEditing extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
-            }).then((res)=>{
+            }).then((res) => {
                 return res.json()
-            }).then((data)=>{
-                if(data.result === 'ok'){
+            }).then((data) => {
+                if (data.result === 'ok') {
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green'
                 }
-            }).catch((err)=>{
+            }).catch((err) => {
                 console.log(err);
             })
         })
@@ -232,7 +231,6 @@ class VideoEditing extends Component {
     render() {
 
 
-
         return (
             <div className='container mt-5'>
                 {/* Title */}
@@ -248,6 +246,10 @@ class VideoEditing extends Component {
                 <div className='d-flex justify-content-center mt-2'>
                     {(this.state.ad1) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad1')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>}
                 </div>
+                <div className='ratio ratio-16x9'>
+                    <iframe src='/ad' title='ad5'>
+                    </iframe>
+                </div>
 
                 <div className='section__1 mt-5'>
 
@@ -259,11 +261,17 @@ class VideoEditing extends Component {
                     </p>
                     <div className='ratio ratio-16x9'>
                         <iframe src='/ad' title='ad2'>
-                    </iframe></div>
+                        </iframe></div>
 
                     <div className='d-flex justify-content-center mt-2'>
                         {(this.state.ad1) ? ((this.state.ad2) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad2')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 1</p>}
                     </div>
+
+                    <div className='ratio ratio-16x9'>
+                        <iframe src='/ad' title='ad5'>
+                        </iframe>
+                    </div>
+
 
                     <p>
                         Focus on a single idea at a time. Figure out what the key idea of your video is and focus on that. By sticking to one theme or problem at a time, you can create a tighter, more informative video.
@@ -272,11 +280,16 @@ class VideoEditing extends Component {
 
                     <div className='ratio ratio-16x9'>
                         <iframe src='/ad' title='ad3'>
-                    </iframe></div>
+                        </iframe></div>
 
                     <div className='d-flex justify-content-center mt-2'>
                         {(this.state.ad2) ? ((this.state.ad3) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad3')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 2</p>}
                     </div>
+
+
+
+                    <div id="container-1f9fba3a4c42eeba308fbf4563eb0668"></div>
+
                     <p>
                         Format your video like a pro
                         Just like you get all kinds of text documents, videos come in a pretty large variety of formats. The most common ones for online streaming are MP4, FLV, and WMV.
@@ -286,12 +299,19 @@ class VideoEditing extends Component {
                         However, you don’t have to worry about formats with Biteable. Your video exports in MP4, a format supported by pretty much every platform worth its salt.
                     </p>
 
-                    <div className='ratio ratio-16x9'>
+                    <div className='ratio ratio-2x1' >
                         <iframe src='/ad' title='ad4'>
-                    </iframe></div>
+                        </iframe></div>
+
+
 
                     <div className='d-flex justify-content-center mt-2'>
                         {(this.state.ad3) ? ((this.state.ad4) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad4')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 3</p>}
+                    </div>
+
+                    <div className='ratio ratio-16x9'>
+                        <iframe src='/ad' title='ad5'>
+                        </iframe>
                     </div>
 
                     <p>
@@ -301,10 +321,15 @@ class VideoEditing extends Component {
 
                     <div className='ratio ratio-16x9'>
                         <iframe src='/ad' title='ad5'>
-                    </iframe></div>
+                        </iframe>
+                    </div>
 
                     <div className='d-flex justify-content-center mt-2'>
                         {(this.state.ad4) ? ((this.state.ad5) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad5')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 4</p>}
+                    </div>
+                    <div className='ratio ratio-16x9'>
+                        <iframe src='/ad' title='ad5'>
+                        </iframe>
                     </div>
 
                     <p> Read it out, make adjustments, and repeat until it sounds right. Keep your writing concise, and make sure that whoever is reading the script practices in advance.
@@ -313,19 +338,24 @@ class VideoEditing extends Component {
 
                     <div className='ratio ratio-16x9'>
                         <iframe src='/ad' title='ad6'>
-                    </iframe></div>
+                        </iframe>
+                    </div>
+                    <div className='ratio ratio-16x9'>
+                        <iframe src='/ad' title='ad6'>
+                        </iframe>
+                    </div>
+
 
                     <div className='d-flex justify-content-center mt-2'>
                         {(this.state.ad5) ? ((this.state.ad6) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad6')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 5</p>}
                     </div>
-
 
                     <div className='mt-5 d-flex justify-content-center mb-5'>
                         {(this.state.ad6) ? <button className='btn btn-primary' onClick={() => this.creditAmount(this.state.ad1, this.state.ad2, this.state.ad3, this.state.ad4, this.state.ad5, this.state.ad6,)}>I watched all ads</button> : <button className='btn btn-primary disabled'>Watch All Ads</button>}
                     </div>
                     <div id='result' className='d-block justify-content-center'></div>
                     <div className='d-block justify-content-center'>
-                        <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link>
+                        {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
                     </div>
                 </div>
 
