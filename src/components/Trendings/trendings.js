@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 
-class trendins extends Component {
+function redirect(){
+  window.location.href = '/article/video-editing-beginners'
+}
+
+class Trendings extends Component {
   render() {
     return (
       <div className='d-flex flex-column align-items-center mt-5'>
         <di className="mb-3 d-block">
           <h3>Articles</h3>
         </di>
-        <div className='ratio ratio-16x9'>
-          <iframe src='/ad' width='1200px' title='ad7'>
-          </iframe></div>
+        <div id="container-1f9fba3a4c42eeba308fbf4563eb0668"></div>
         <div className="card mb-3" style={{ maxWidth: 540 + 'px' }}>
           <div className="row g-0">
             <div className="col-md-4">
@@ -20,18 +21,14 @@ class trendins extends Component {
               <div className="card-body">
                 <h5 className="card-title">Video Editing</h5>
                 <p className="card-text">Think of this post as your uber-brief but thorough guide to everything you need to know about video editing. We’ll talk about putting together a script, adding the right kind of audio, formatting your video like a pro, and so much more. Let’s dive in.</p>
-                <Link to='/article/video-editing-beginners' className='btn btn-warning'>Read</Link>
+                <button onClick={redirect} className='btn btn-warning'>Read</button>
               </div>
             </div>
           </div>
-        </div>
-        <div className='ratio ratio-16x9'>
-          <iframe src='/ad' width='1200px' title='ad8'>
-          </iframe>
         </div>
       </div>
     )
   }
 }
 
-export default trendins
+export default Trendings
