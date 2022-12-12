@@ -10,7 +10,6 @@ import Terms from './components/privacy-terms/Terms';
 import Test from './components/Test/Test';
 import VideoEditing from './components/Trendings/articles/videoEditing';
 import VideoEditing2022 from './components/Trendings/articles/videoEditing2022';
-import VideoEditingTips from './components/Trendings/articles/videoEditingTips';
 import SignUpMiddleWare from './components/Oauth/Singup/SignUpMiddleWare';
 import ForgetPassword from './components/Oauth/Login/ForgetPassword';
 import MyAccountMiddleWare from './components/myAccount/myAccountMiddleWare';
