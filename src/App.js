@@ -12,8 +12,10 @@ import VideoEditing from './components/Trendings/articles/videoEditing';
 import SignUpMiddleWare from './components/Oauth/Singup/SignUpMiddleWare';
 import ForgetPassword from './components/Oauth/Login/ForgetPassword';
 import MyAccountMiddleWare from './components/myAccount/myAccountMiddleWare';
+import MyAccount from './components/myAccount/MyAccount';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import config from './config';
+import VideoEditingTips from './components/Trendings/articles/VideoEditingTips';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -45,14 +47,14 @@ class App extends Component {
                         <Route path='/Oauth/Signup' element={< SignUpMiddleWare />}></Route>
                         <Route path='/trendings' element={< Trendings />}></Route>
                         <Route path='/forgetPassword' element={<ForgetPassword />}></Route>
+                        <Route path={`/myAccount/${this.state.uid}`} element={<MyAccount />}></Route>
                         <Route path={`/myAccount/${this.state.uid}`} element={<MyAccountMiddleWare />}></Route>
                         <Route path='/pigama/terms' element={< Terms />}></Route>
                         <Route path='/article/video-editing-beginners' element={< VideoEditing />}></Route>
                         <Route path='/test' element={< Test />}></Route>
                         <Route path='/pigama/privacy' element={< Privacy />}></Route>
-                    </Routes>
-                    <Routes>
-                        <Route path='/trendings' element={< Trendings />}></Route>
+                        <Route path='/article/video-editing-tips' element={<VideoEditingTips />}></Route>
+                        <Route path='/article/video-editing-2022' element={<VideoEditingTips />}></Route>
                     </Routes>
                 </div>
             </Router>

