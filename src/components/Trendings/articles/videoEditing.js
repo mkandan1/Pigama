@@ -249,10 +249,7 @@ ad6: false
                 <div className='d-flex justify-content-center mt-2'>
                     {(this.state.ad1) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad1')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>}
                 </div>
-                <div className='ratio ratio-16x9'>
-                    <iframe src='/ad' title='ad5'>
-                    </iframe>
-                </div>
+                
 
                 <div className='section__1 mt-5'>
 
@@ -270,10 +267,7 @@ ad6: false
                         {(this.state.ad1) ? ((this.state.ad2) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad2')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 1</p>}
                     </div>
 
-                    <div className='ratio ratio-16x9'>
-                        <iframe src='/ad' title='ad5'>
-                        </iframe>
-                    </div>
+                    
 
 
                     <p>
@@ -312,10 +306,7 @@ ad6: false
                         {(this.state.ad3) ? ((this.state.ad4) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad4')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 3</p>}
                     </div>
 
-                    <div className='ratio ratio-16x9'>
-                        <iframe src='/ad' title='ad5'>
-                        </iframe>
-                    </div>
+                    
 
                     <p>
                         Organize your footage. “You have to be organized,” says Tiffani Bauer, video producer at Descript. “Starting off by organizing your stuff straight out of the camera is great.” Keeping your video clips in order will allow you to quickly find the pieces you need when you need them. Decide on a management strategy and file structure, and keep it consistent. Create folders for your project on your device and make subfolders for your raw clips depending on their type, or where they belong in your edit.
@@ -353,9 +344,7 @@ ad6: false
                         {(this.state.ad5) ? ((this.state.ad6) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad6')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>) : <p>Please watch Ad 5</p>}
                     </div>
 
-                    <div className='mt-5 d-flex justify-content-center mb-5'>
-                        {(this.state.ad6) ? <button className='btn btn-primary' onClick={() => this.creditAmount(this.state.ad1, this.state.ad2, this.state.ad3, this.state.ad4, this.state.ad5, this.state.ad6,)}>I watched all ads</button> : <button className='btn btn-primary disabled'>Watch All Ads</button>}
-                    </div>
+                    
                     <div id='result' className='d-block justify-content-center'></div>
                     <div className='d-block justify-content-center'>
                         {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
