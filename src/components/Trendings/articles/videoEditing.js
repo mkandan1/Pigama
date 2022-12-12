@@ -58,6 +58,9 @@ class VideoEditing extends Component {
                 return res.json()
             }).then((data) => {
                 if (data.result === 'ok') {
+                     this.setState({
+ad6: false
+})
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green'
                 }
