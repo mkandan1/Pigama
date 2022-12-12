@@ -9,6 +9,8 @@ import Privacy from './components/privacy-terms/Privacy';
 import Terms from './components/privacy-terms/Terms';
 import Test from './components/Test/Test';
 import VideoEditing from './components/Trendings/articles/videoEditing';
+import VideoEditing2022 from './components/Trendings/articles/videoEditing2022';
+import VideoEditingTips from './components/Trendings/articles/videoEditingTips';
 import SignUpMiddleWare from './components/Oauth/Singup/SignUpMiddleWare';
 import ForgetPassword from './components/Oauth/Login/ForgetPassword';
 import MyAccountMiddleWare from './components/myAccount/myAccountMiddleWare';
@@ -54,7 +56,7 @@ class App extends Component {
                         <Route path='/test' element={< Test />}></Route>
                         <Route path='/pigama/privacy' element={< Privacy />}></Route>
                         <Route path='/article/video-editing-tips' element={<VideoEditingTips />}></Route>
-                        <Route path='/article/video-editing-2022' element={<VideoEditingTips />}></Route>
+                        <Route path='/article/video-editing-2022' element={<VideoEditing2022/>}></Route>
                     </Routes>
                 </div>
             </Router>
