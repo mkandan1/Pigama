@@ -127,22 +127,21 @@ class VideoEditing extends Component {
 
     render() {
 
-        const meta = {
-            title: 'Video Editing Beginners Tutorial 2022',
-            description: 'Video editing tutorial for beginners 2022. Get advanced in editing editing by following our tutorial',
-            canonical: 'http://pigama.looficats.com/article/video-editing-beginners',
-            meta: {
-                charset: 'utf-8',
-                name: {
-                    keywords: 'video editing 2022, wondershare, vfx, beginners tutorial, video editing for beginners'
-                }
-            }
-        };
+        // const meta = {
+        //     title: 'Video Editing Beginners Tutorial 2022',
+        //     description: 'Video editing tutorial for beginners 2022. Get advanced in editing editing by following our tutorial',
+        //     canonical: 'http://pigama.looficats.com/article/video-editing-beginners',
+        //     meta: {
+        //         name: {
+        //             keywords: 'video editing 2022, wondershare, vfx, beginners tutorial, video editing for beginners'
+        //         }
+        //     }
+        // };
 
 
 
         return (
-            <DocumentMeta {...meta}>
+            <div>
                 <Header/>
                 <div className='container mt-5'>
                     {/* Title */}
@@ -211,7 +210,7 @@ class VideoEditing extends Component {
                     </div>
 
                 </div>
-            </DocumentMeta>
+            </div>
         )
     }
 }
