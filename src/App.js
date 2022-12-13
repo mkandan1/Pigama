@@ -15,6 +15,8 @@ import MyAccount from './components/myAccount/MyAccount';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import config from './config';
 import VideoEditing from './components/Trendings/articles/videoEditing'
+import VideoEditingTips from './components/Trendings/articles/VideoEditingTips'
+import VideoEditing2022 from './components/Trendings/articles/VideoEdting2022'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -52,8 +54,8 @@ class App extends Component {
                         <Route path='/article/video-editing-beginners' element={< VideoEditing />}></Route>
                         <Route path='/test' element={< Test />}></Route>
                         <Route path='/pigama/privacy' element={< Privacy />}></Route>
-                        {/* <Route path='/article/video-editing-tips' element={<VideoEditingTips />}></Route>
-                        <Route path='/article/video-editing-2022' element={<VideoEditing2022/>}></Route> */}
+                        <Route path='/article/video-editing-tips' element={<VideoEditingTips />}></Route>
+                        <Route path='/article/video-editing-2022' element={<VideoEditing2022/>}></Route>
                     </Routes>
                 </div>
             </Router>

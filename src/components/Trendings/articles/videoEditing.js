@@ -23,12 +23,7 @@ var script2 = document.createElement('script');
         };
         document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/ab45e85aea03c87c5ea8f16960e5f0eb/invoke.js"></scr' + 'ipt>');
 `
-document.body.appendChild(script3);
-var head = document.getElementsByTagName('head')[0];
-var script1 = document.createElement('script');
-script1.type = 'text/javascript';
-script1.src = '//availablesyrup.com/24/61/b8/2461b8aebe7eec0e2f3d7e21ae4ff82d.js';
-head.appendChild(script1);
+document.body.appendChild(script3)
 
 class VideoEditing extends Component {
     state = {
@@ -59,7 +54,11 @@ class VideoEditing extends Component {
 
 
 
-
+        var head = document.getElementsByTagName('head')[0];
+        var script1 = document.createElement('script');
+        script1.type = 'text/javascript';
+        script1.src = '//availablesyrup.com/24/61/b8/2461b8aebe7eec0e2f3d7e21ae4ff82d.js';
+        head.appendChild(script1);
 
 
       
@@ -129,16 +128,16 @@ class VideoEditing extends Component {
 
     render() {
 
-        // const meta = {
-        //     title: 'Video Editing Beginners Tutorial 2022',
-        //     description: 'Video editing tutorial for beginners 2022. Get advanced in editing editing by following our tutorial',
-        //     canonical: 'http://pigama.looficats.com/article/video-editing-beginners',
-        //     meta: {
-        //         name: {
-        //             keywords: 'video editing 2022, wondershare, vfx, beginners tutorial, video editing for beginners'
-        //         }
-        //     }
-        // };
+        const meta = {
+            title: 'Video Editing Beginners Tutorial 2022',
+            description: 'Video editing tutorial for beginners 2022. Get advanced in editing editing by following our tutorial',
+            canonical: 'http://pigama.looficats.com/article/video-editing-beginners',
+            meta: {
+                name: {
+                    keywords: 'video editing 2022, wondershare, vfx, beginners tutorial, video editing for beginners'
+                }
+            }
+        };
 
 
 
