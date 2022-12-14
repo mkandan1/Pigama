@@ -74,7 +74,7 @@ class VideoEditing extends Component {
             }).then((data) => {
                 if (data.result === 'ok') {
                     this.setState({
-                        ad6: false
+                        ad1: false
                     })
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green'
@@ -103,7 +103,7 @@ class VideoEditing extends Component {
                     this.setState({
                         countFromSecond: 20,
                         timerId: 0,
-                        ad1: true
+                        ad1: false
                     })
                     clearInterval(this.state.timerId);
                 }
