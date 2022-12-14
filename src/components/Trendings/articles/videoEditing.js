@@ -5,32 +5,34 @@ import config from '../../../config';
 import { Link } from 'react-router-dom';
 import DocumentMeta from 'react-document-meta';
 import Header from '../../essentials/Header';
+import { detect } from 'detect-browser'
+const browser = detect()
 
-// var script2 = document.createElement('script');
-//         script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
+var script2 = document.createElement('script');
+        script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
 
-//         document.body.appendChild(script2);
+        document.body.appendChild(script2);
 
-//         var script3 = document.createElement('script')
-//         script3.type = 'text/javascript';
-//         script3.innerHTML = `
-//         atOptions = {
-//             'key' : 'af0d679c230c081da37cf2a31cbd2afc',
-//             'format' : 'iframe',
-//             'height' : 60,
-//             'width' : 468,
-//             'params' : {}
-//         };
-//         document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');
-// `
-// document.body.appendChild(script3)
+        var script3 = document.createElement('script')
+        script3.type = 'text/javascript';
+        script3.innerHTML = `
+        atOptions = {
+            'key' : 'af0d679c230c081da37cf2a31cbd2afc',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+        document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');
+`
+document.body.appendChild(script3)
 
 class VideoEditing extends Component {
     state = {
         countFromSecond: 20,
         timerId: 0,
         status: 'Start',
-        ad1: true,
+        ad1: false,
         uid: 0,
         load: false
     };
@@ -51,11 +53,20 @@ class VideoEditing extends Component {
                 })
             }
         })
-      
+
     }
 
     creditAmount(ad1) {
 
+
+
+
+        if (browser.name !== 'chrome') {
+            document.getElementById('result').innerText = "Please use chrome browser"
+            document.getElementById('result').style.color = 'red'
+            return
+
+        }
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
             const uid = user.uid;
@@ -77,10 +88,10 @@ class VideoEditing extends Component {
                         ad1: false
                     })
                     document.getElementById('result').innerText = "Balance updated"
-                    document.getElementById('result').style.color = 'green'
+                    document.getElementById('result').style.color = 'green';
                     window.location.reload()
                 }
-                else if(data.result === 'limit_reached'){
+                else if (data.result === 'limit_reached') {
                     document.getElementById('result').innerText = "Today limit over"
                     document.getElementById('result').style.color = 'red'
                 }
@@ -137,8 +148,10 @@ class VideoEditing extends Component {
 
 
         return (
+                
+            <DocumentMeta {...meta}>
             <div>
-                <Header/>
+                <Header />
                 <div className='container mt-5'>
                     {/* Title */}
                     <div>
@@ -184,29 +197,30 @@ class VideoEditing extends Component {
 
                         <div id="container-1f9fba3a4c42eeba308fbf4563eb0668"></div>
 
-                      { (this.state.uid !== 0) ? <span>
-                        <div className='d-flex justify-content-center mt-2'>
-                            {(this.state.ad1) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad1')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>}
-                        </div>
+                        {(this.state.uid !== 0) ? <span>
+                            <div className='d-flex justify-content-center mt-2'>
+                                {(this.state.ad1) ? <button className='btn btn-primary'>Watched</button> : <button onClick={() => this.startTimer('ad1')} className='btn btn-primary'>{this.state.status} <span>{this.state.countFromSecond}</span></button>}
+                            </div>
 
 
-                        <div className='mt-5 d-flex justify-content-center mb-5'>
-                            {(this.state.ad1) ? <button className='btn btn-primary' onClick={() => this.creditAmount(this.state.ad1)}>I watched all ads</button> : <button className='btn btn-primary disabled'>Watch All Ads</button>}
-                        </div>
+                            <div className='mt-5 d-flex justify-content-center mb-5'>
+                                {(this.state.ad1) ? <button className='btn btn-primary' onClick={() => this.creditAmount(this.state.ad1)}>I watched all ads</button> : <button className='btn btn-primary disabled'>Watch All Ads</button>}
+                            </div>
 
-                        <div id='result' className='d-flex justify-content-center'></div>
-                        <div className='d-flex justify-content-center'>
-                            {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
-                        </div>
+                            <div id='result' className='d-flex justify-content-center'></div>
+                            <div className='d-flex justify-content-center'>
+                                {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
+                            </div>
 
-                        <div className='d-flex justify-content-center mt-3'>
-                            <button onClick={()=>window.location.href = '/article/video-editing-tips'} className='btn btn-primary'>Next Page</button>
-                        </div>
-                      </span> : <p></p>}
+                            <div className='d-flex justify-content-center mt-3'>
+                                <button onClick={() => window.location.href = '/article/video-editing-tips'} className='btn btn-primary'>Next Page</button>
+                            </div>
+                        </span> : <p></p>}
                     </div>
 
                 </div>
             </div>
+            </DocumentMeta>
         )
     }
 }

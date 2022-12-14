@@ -41,6 +41,12 @@ class VideoEditing2022 extends Component {
 
 
     creditAmount(ad1) {
+        if (browser.name !== 'chrome') {
+            document.getElementById('result').innerText = "Please use chrome browser"
+            document.getElementById('result').style.color = 'red'
+            return
+
+        }
 
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
@@ -67,8 +73,7 @@ class VideoEditing2022 extends Component {
                     
                     window.location.reload();
                 }
-                else 
-                if(data.result === 'limit_reached'){
+                else if(data.result === 'limit_reached'){
                     document.getElementById('result').innerText = "Today limit over"
                     document.getElementById('result').style.color = 'red'
                 }
@@ -81,16 +86,8 @@ class VideoEditing2022 extends Component {
     // TODO: use the requestAnimationFrame
     startTimer = (ad) => {
         document.addEventListener('visibilitychange', (e)=>{
-            if (document.visibilityState === 'hidden'){
-                this.setState({
-                    countFromSecond: 20,
-                    timerId: 0,
-                    ad1: false
-                })
-         
-                clearInterval(this.state.timerId);
-                }
-                else {
+           
+        
                         const timerId = setInterval(() => {
                             const {
                                 state: { countFromSecond: seconds }
@@ -118,8 +115,8 @@ class VideoEditing2022 extends Component {
                 
         
             }
-        })
-       
+        
+        )
     };
 
     render() {

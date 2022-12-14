@@ -41,6 +41,12 @@ class VideoEditingTips extends Component {
 
 
     creditAmount(ad1) {
+        if (browser.name !== 'chrome') {
+            document.getElementById('result').innerText = "Please use chrome browser"
+            document.getElementById('result').style.color = 'red'
+            return
+
+        }
 
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
