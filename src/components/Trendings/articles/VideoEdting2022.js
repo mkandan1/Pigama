@@ -28,7 +28,7 @@ document.body.appendChild(script2);
 
 class VideoEditing2022 extends Component {
     state = {
-        countFromSecond: 12,
+        countFromSecond: 20,
         timerId: 0,
         status: 'Start',
         ad1: false,
@@ -63,7 +63,7 @@ class VideoEditing2022 extends Component {
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
             const uid = user.uid;
-            const creditAmount = 0.20
+            const creditAmount = 0.35
 
             const data = { uid: uid, creditAmount: creditAmount }
 
@@ -105,7 +105,7 @@ class VideoEditing2022 extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 12,
+                        countFromSecond: 20,
                         timerId: 0,
                         ad1: true
                     })
