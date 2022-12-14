@@ -27,8 +27,9 @@ function createAnAccount() {
             const balance = 0;
             const withdrawHistory = 0;
             const upiID = 0;
+            const limit = {total: 0, date: ''}
             const db = getDatabase(config)
-            function writeUser(uid, firstName, lastName, email, number, role, balance, withdrawHistory, upiID) {
+            function writeUser(uid, firstName, lastName, email, number, role, balance, withdrawHistory, upiID, limit) {
     
     
                 set(ref(db, 'Users/' + uid), {
@@ -37,6 +38,7 @@ function createAnAccount() {
                     lastName: lastName,
                     email: email,
                     role: role,
+                    limit: limit,
                     balance: balance,
                     number: number,
                     upiID: upiID,
@@ -62,7 +64,7 @@ function createAnAccount() {
         )
 
         
-        writeUser(uid, firstName, lastName, email, number, role, balance, withdrawHistory, upiID)
+        writeUser(uid, firstName, lastName, email, number, role, balance, withdrawHistory, upiID, limit)
         window.location.href = '/trendings'
 }
 )  

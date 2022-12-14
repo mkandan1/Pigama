@@ -6,31 +6,31 @@ import { Link } from 'react-router-dom';
 import DocumentMeta from 'react-document-meta';
 import Header from '../../essentials/Header';
 
-var script2 = document.createElement('script');
-        script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
+// var script2 = document.createElement('script');
+//         script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
 
-        document.body.appendChild(script2);
+//         document.body.appendChild(script2);
 
-        var script3 = document.createElement('script')
-        script3.type = 'text/javascript';
-        script3.innerHTML = `
-        atOptions = {
-            'key' : 'af0d679c230c081da37cf2a31cbd2afc',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-        };
-        document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');
-`
-document.body.appendChild(script3)
+//         var script3 = document.createElement('script')
+//         script3.type = 'text/javascript';
+//         script3.innerHTML = `
+//         atOptions = {
+//             'key' : 'af0d679c230c081da37cf2a31cbd2afc',
+//             'format' : 'iframe',
+//             'height' : 60,
+//             'width' : 468,
+//             'params' : {}
+//         };
+//         document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');
+// `
+// document.body.appendChild(script3)
 
 class VideoEditing extends Component {
     state = {
         countFromSecond: 20,
         timerId: 0,
         status: 'Start',
-        ad1: false,
+        ad1: true,
         uid: 0,
         load: false
     };
@@ -79,6 +79,10 @@ class VideoEditing extends Component {
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green'
                     window.location.reload()
+                }
+                else if(data.result === 'limit_reached'){
+                    document.getElementById('result').innerText = "Today limit over"
+                    document.getElementById('result').style.color = 'red'
                 }
             }).catch((err) => {
                 console.log(err);
@@ -190,7 +194,7 @@ class VideoEditing extends Component {
                             {(this.state.ad1) ? <button className='btn btn-primary' onClick={() => this.creditAmount(this.state.ad1)}>I watched all ads</button> : <button className='btn btn-primary disabled'>Watch All Ads</button>}
                         </div>
 
-                        <div id='result' className='d-block justify-content-center'></div>
+                        <div id='result' className='d-flex justify-content-center'></div>
                         <div className='d-flex justify-content-center'>
                             {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
                         </div>

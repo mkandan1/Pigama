@@ -66,6 +66,10 @@ class VideoEditingTips extends Component {
                     document.getElementById('result').style.color = 'green';
                     window.location.reload()
                 }
+                else if(data.result === 'limit_reached'){
+                    document.getElementById('result').innerText = "Today limit over"
+                    document.getElementById('result').style.color = 'red'
+                }
             }).catch((err) => {
                 console.log(err);
             })

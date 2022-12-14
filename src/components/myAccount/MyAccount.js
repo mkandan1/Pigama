@@ -73,10 +73,12 @@ class MyAccount extends Component {
     if(reg.test(id)===false){
       document.getElementById('upi-error').innerText = 'Invalid UPI ID'
       document.getElementById('upi-error').style.color = 'red'
+      return false
     }
     else{
       document.getElementById('upi-error').innerText = ''
       document.getElementById('upi-error').style.color = ''
+      return true
     }
  }
 
@@ -195,7 +197,7 @@ class MyAccount extends Component {
                 <div className='statistics d-block d-md-flex justify-content-between'>
                   <div className=''>
                     <h6><b>Balance:</b></h6>
-                    <p>₹ {this.state.balance}</p>
+                    <p>₹ {(this.state.balance).toFixed(2)}</p>
                   </div>
                   <div className='d-md-flex d-block'>
                     <span><b>UPI ID:</b></span>

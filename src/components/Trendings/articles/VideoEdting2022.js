@@ -67,6 +67,11 @@ class VideoEditing2022 extends Component {
                     
                     window.location.reload();
                 }
+                else 
+                if(data.result === 'limit_reached'){
+                    document.getElementById('result').innerText = "Today limit over"
+                    document.getElementById('result').style.color = 'red'
+                }
             }).catch((err) => {
                 console.log(err);
             })
@@ -192,7 +197,7 @@ class VideoEditing2022 extends Component {
                                 {(this.state.ad1) ? <button className='btn btn-primary' onClick={() => this.creditAmount(this.state.ad1)}>I watched all ads</button> : <button className='btn btn-primary disabled'>Watch All Ads</button>}
                             </div>
 
-                            <div id='result' className='d-block justify-content-center'></div>
+                            <div id='result' className='d-flex justify-content-center'></div>
                             <div className='d-flex justify-content-center'>
                                 {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
                             </div>
