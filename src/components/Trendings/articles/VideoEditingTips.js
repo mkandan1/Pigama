@@ -76,7 +76,7 @@ class VideoEditingTips extends Component {
             }).then((data) => {
                 if (data.result === 'ok') {
                     this.setState({
-                        ad6: false
+                        ad1: false
                     })
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green'
