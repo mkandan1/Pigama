@@ -78,6 +78,7 @@ class VideoEditing extends Component {
                     })
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green'
+                    window.location.reload()
                 }
             }).catch((err) => {
                 console.log(err);
