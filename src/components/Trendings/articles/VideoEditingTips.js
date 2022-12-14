@@ -7,22 +7,24 @@ import DocumentMeta from 'react-document-meta';
 import Header from '../../essentials/Header';
 import '../../../assets/Video/vadivel.mp4'
 
-let script = document.createElement('script')
-script.type = "text/javascript";
-script.innerHTML = `atOptions = {
-'key' : 'af0d679c230c081da37cf2a31cbd2afc',
-'format' : 'iframe',
-'height' : 60,
-'width' : 468,
-'params' : {}
-};
-document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');`
+// var script2 = document.createElement('script');
+//         script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
 
-document.body.appendChild(script)
+//         document.body.appendChild(script2);
 
-var script2 = document.createElement('script');
-script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
-document.body.appendChild(script2);
+//         var script3 = document.createElement('script')
+//         script3.type = 'text/javascript';
+//         script3.innerHTML = `
+//         atOptions = {
+//             'key' : 'af0d679c230c081da37cf2a31cbd2afc',
+//             'format' : 'iframe',
+//             'height' : 60,
+//             'width' : 468,
+//             'params' : {}
+//         };
+//         document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');
+// `
+// document.body.appendChild(script3)
 
 class VideoEditingTips extends Component {
     state = {
@@ -61,7 +63,7 @@ class VideoEditingTips extends Component {
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
             const uid = user.uid;
-            const creditAmount = 0.35
+            const creditAmount = 0.30
 
             const data = { uid: uid, creditAmount: creditAmount }
 
@@ -105,7 +107,7 @@ class VideoEditingTips extends Component {
                     this.setState({
                         countFromSecond: 20,
                         timerId: 0,
-                        ad1: false
+                        ad1: true
                     })
                     clearInterval(this.state.timerId);
                 }

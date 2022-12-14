@@ -6,24 +6,24 @@ import { Link } from 'react-router-dom';
 import DocumentMeta from 'react-document-meta';
 import Header from '../../essentials/Header';
 
-var script2 = document.createElement('script');
-        script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
+// var script2 = document.createElement('script');
+//         script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
 
-        document.body.appendChild(script2);
+//         document.body.appendChild(script2);
 
-        var script3 = document.createElement('script')
-        script3.type = 'text/javascript';
-        script3.innerHTML = `
-        atOptions = {
-            'key' : 'ab45e85aea03c87c5ea8f16960e5f0eb',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-        };
-        document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/ab45e85aea03c87c5ea8f16960e5f0eb/invoke.js"></scr' + 'ipt>');
-`
-document.body.appendChild(script3)
+//         var script3 = document.createElement('script')
+//         script3.type = 'text/javascript';
+//         script3.innerHTML = `
+//         atOptions = {
+//             'key' : 'af0d679c230c081da37cf2a31cbd2afc',
+//             'format' : 'iframe',
+//             'height' : 60,
+//             'width' : 468,
+//             'params' : {}
+//         };
+//         document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://availablesyrup.com/af0d679c230c081da37cf2a31cbd2afc/invoke.js"></scr' + 'ipt>');
+// `
+// document.body.appendChild(script3)
 
 class VideoEditing extends Component {
     state = {
@@ -59,7 +59,7 @@ class VideoEditing extends Component {
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
             const uid = user.uid;
-            const creditAmount = 0.35
+            const creditAmount = 0.30
 
             const data = { uid: uid, creditAmount: creditAmount }
 
