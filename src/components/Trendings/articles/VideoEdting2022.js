@@ -5,7 +5,9 @@ import config from '../../../config';
 import { Link } from 'react-router-dom';
 import DocumentMeta from 'react-document-meta';
 import Header from '../../essentials/Header';
-import '../../../assets/Video/vadivel.mp4'
+import '../../../assets/Video/vadivel.mp4';
+import { detect } from 'detect-browser'
+const browser = detect()
 
 
 class VideoEditing2022 extends Component {
