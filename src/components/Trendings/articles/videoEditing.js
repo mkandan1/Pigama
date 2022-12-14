@@ -103,7 +103,7 @@ class VideoEditing extends Component {
                     this.setState({
                         countFromSecond: 20,
                         timerId: 0,
-                        ad1: false
+                        ad1: true
                     })
                     clearInterval(this.state.timerId);
                 }
