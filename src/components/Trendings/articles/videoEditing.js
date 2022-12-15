@@ -12,6 +12,7 @@ const browser = detect()
 var socialBar = document.createElement('script')
 socialBar.type = 'text/javascript'
 socialBar.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
+document.body.appendChild(socialBar)
 
 document.body.appendChild(socialBar)
 var script3 = document.createElement('script')
