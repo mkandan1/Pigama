@@ -12,7 +12,7 @@ const browser = detect()
 
 class VideoEditingTips extends Component {
     state = {
-        countFromSecond: 20,
+        countFromSecond: 23,
         timerId: 0,
         status: 'Start',
         ad1: false,
@@ -100,7 +100,7 @@ class VideoEditingTips extends Component {
                     });
                 } else {
                     this.setState({
-                        countFromSecond: 20,
+                        countFromSecond: 25,
                         timerId: 0,
                         ad1: true
                     })
