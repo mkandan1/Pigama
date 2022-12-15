@@ -146,6 +146,10 @@ class MyAccount extends Component {
           document.getElementById('withdraw__message').innerText = 'Withdraw request has been sent'
           document.getElementById('withdraw__message').style.color = 'green';
         }
+        else if(data.result === 'no_upi_id'){
+          document.getElementById('withdraw__message').innerText = 'Please add UPI ID'
+          document.getElementById('withdraw__message').style.color = 'red';
+        }
         else if(data.result === 'duplicate'){
           document.getElementById('withdraw__message').innerText = 'Depulicate request'
           document.getElementById('withdraw__message').style.color = 'red';
