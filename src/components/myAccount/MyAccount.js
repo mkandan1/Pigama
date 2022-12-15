@@ -215,7 +215,7 @@ class MyAccount extends Component {
                 <div className='withdrawHistory mt-5'>
                   <div className='d-md-flex d-block justify-content-between'>
                     <h6><b>Withdraw History</b></h6>
-                    {(this.state.balance >= 200) ?
+                    {(this.state.balance >= 15) ?
                       <div>
                         <button className='btn btn-outline-primary' onClick={this.withdraw}>Request Money ₹ {this.state.balance}</button>
                         <span className='d-block' id='withdraw__message'></span>
