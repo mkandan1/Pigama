@@ -17,6 +17,7 @@ import config from './config';
 import VideoEditing from './components/Trendings/articles/videoEditing'
 import VideoEditingTips from './components/Trendings/articles/VideoEditingTips'
 import VideoEditing2022 from './components/Trendings/articles/VideoEdting2022'
+
 class App extends Component {
     constructor(props) {
         super(props);

@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 import DocumentMeta from 'react-document-meta';
 import Header from '../../essentials/Header';
 import '../../../assets/Video/vadivel.mp4';
-import { detect } from 'detect-browser'
+import { detect } from 'detect-browser';
 const browser = detect()
 
 
 class VideoEditingTips extends Component {
     state = {
-        countFromSecond: 23,
+        countFromSecond: 25,
         timerId: 0,
         status: 'Start',
         ad1: false,
@@ -27,6 +27,21 @@ class VideoEditingTips extends Component {
 
     componentWillMount() {
 
+        
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                this.setState({
+                    countFromSecond: 25,
+                    timerId: 0,
+                    ad1: false
+                })
+                clearInterval(this.state.timerId);
+
+                document.getElementById('result').innerText = "Kindly don' t leave the site"
+                document.getElementById('result').style.color = 'red'
+            }
+        })
 
 
         const auth = getAuth(config);

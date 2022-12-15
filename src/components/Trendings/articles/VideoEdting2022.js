@@ -26,7 +26,19 @@ class VideoEditing2022 extends Component {
     }
 
     componentWillMount() {
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                this.setState({
+                    countFromSecond: 25,
+                    timerId: 0,
+                    ad1: false
+                })
+                clearInterval(this.state.timerId);
 
+                document.getElementById('result').innerText = "Kindly don' t leave the site"
+                document.getElementById('result').style.color = 'red'
+            }
+        })
 
 
         const auth = getAuth(config);

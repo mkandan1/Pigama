@@ -15,7 +15,7 @@ function signIn() {
   const auth = getAuth(config);
 
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-    const uid = userCredential.user.uid;
+    
 
     window.location.href = `/`
   })
