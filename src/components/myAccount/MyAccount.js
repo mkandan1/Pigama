@@ -58,7 +58,7 @@ class MyAccount extends Component {
           return res.json()
         }).then((data)=>{
           if(data.result === 'ok'){
-            document.getElementById('upi-error').innerText = 'Updated';
+            document.getElementById('upi-error').innerText = 'Updated. Please reload the site';
             document.getElementById('upi-error').style.color = 'green';
           }
         })
@@ -71,11 +71,11 @@ class MyAccount extends Component {
    validateNumber(number) {
     const reg = /^(?:(?:\+|0{0,2})91(\s*[-]\s*)?|[0]?)?[6789]\d{9}$/;
     if (reg.test(number) === false) {
-        document.getElementById('number-error').innerText = 'Enter valid number'
+        document.getElementById('upi-error').innerText = 'Enter valid number'
         return false
     }
     else {
-        document.getElementById('number-error').innerText = ''
+        document.getElementById('upi-error').innerText = ''
         return true
     }
 }
@@ -205,7 +205,7 @@ class MyAccount extends Component {
                     <span><b>GPay/PhonePe Number:</b></span>
                     {(this.state.upiID === 0) ?
                       <div className='ms-md-2 ms-0'>
-                        <input type='text' placeholder='Add UPI ID' id='upi__id' />
+                        <input type='text' placeholder='Add number' id='upi__id' />
                         <input type='submit' value='Add' onClick={this.addUpiId} />
                         <span className='d-block' id='upi-error'></span>
                       </div> :
