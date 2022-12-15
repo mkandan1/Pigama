@@ -65,7 +65,7 @@ function createAnAccount() {
 
         
         writeUser(uid, firstName, lastName, email, number, role, balance, withdrawHistory, upiID, limit)
-        window.location.href = '/trendings'
+        document.getElementById('result').innerHTML ='Account created. Please login'
 }
 )  
 .catch((error) => {
@@ -214,7 +214,9 @@ class Signup extends Component {
                                         <div className="mt-4 pt-2">
                                             <input className="btn btn-primary btn-lg" type="submit" value="Submit" onClick={createAnAccount} />
                                         </div>
-
+<div className="d-flex justufy-content-center">
+ <p id="result"></p>
+</div>
                                     </div>
 
                                     <div className='option__login mt-4'>
