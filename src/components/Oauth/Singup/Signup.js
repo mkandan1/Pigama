@@ -15,7 +15,7 @@ function createAnAccount() {
 
 
 
-    if (validateName(firstName) === false || validateName(lastName) === false || validateEmail(email) === false || validateDob(dob) === false || validatePassword(password) === false || validateNumber(number) === false) {
+    if (validateName(firstName) === false || validateEmail(email) === false || validateDob(dob) === false || validatePassword(password) === false || validateNumber(number) === false) {
         return
     }
 
