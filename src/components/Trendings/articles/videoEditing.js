@@ -8,10 +8,7 @@ import Header from '../../essentials/Header';
 import { detect } from 'detect-browser'
 const browser = detect()
 
-var script2 = document.createElement('script');
-        script2.src = '//availablesyrup.com/8f/bd/d0/8fbdd0bc94b865de3c277cad8b290033.js';
-        document.body.appendChild(script2);
-        
+
 var script3 = document.createElement('script')
 script3.type = 'text/javascript';
 script3.innerHTML = `
