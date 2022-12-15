@@ -72,7 +72,7 @@ class VideoEditingTips extends Component {
                     })
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green';
-                    window.location.reload()
+                    window.location.href = '/article/video-editing-2022'
                 }
                 else if(data.result === 'limit_reached'){
                     document.getElementById('result').innerText = "Today limit over"
@@ -174,9 +174,6 @@ class VideoEditingTips extends Component {
                             <div id='result' className='d-block justify-content-center'></div>
                             <div className='d-flex justify-content-center'>
                                 {(this.state.uid !== 0) ? <Link to={`/myAccount/${this.state.uid}`}>Check Balance</Link> : <p>Please sign in to proceed</p>}
-                            </div>
-                            <div className='d-flex justify-content-center mt-3'>
-                                <button onClick={() => window.location.href = '/article/video-editing-2022'} className='btn btn-primary mb-1'>Next Page</button>
                             </div>
                         </span> : <p></p>}
                     </div>
