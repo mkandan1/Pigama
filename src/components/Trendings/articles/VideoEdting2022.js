@@ -72,10 +72,10 @@ class VideoEditing2022 extends Component {
                     })
                     document.getElementById('result').innerText = "Balance updated"
                     document.getElementById('result').style.color = 'green';
-                    
+
                     window.location.href = '/article/video-editing-beginners'
                 }
-                else if(data.result === 'limit_reached'){
+                else if (data.result === 'limit_reached') {
                     document.getElementById('result').innerText = "Today limit over"
                     document.getElementById('result').style.color = 'red'
                 }
@@ -87,37 +87,40 @@ class VideoEditing2022 extends Component {
 
     // TODO: use the requestAnimationFrame
     startTimer = (ad) => {
-        document.addEventListener('visibilitychange', (e)=>{
-           
-        
-                        const timerId = setInterval(() => {
-                            const {
-                                state: { countFromSecond: seconds }
-                            } = this;
-            
-                            if (seconds > 0) {
-                                this.setState({
-                                    countFromSecond: seconds - 1,
-                                    status: 'Wait for '
-            
-                                });
-                            } else {
-                                this.setState({
-                                    countFromSecond: 20,
-                                    timerId: 0,
-                                    ad1: true
-                                })
-                                clearInterval(this.state.timerId);
-                            }
-                        }, 1000);
-            
+        document.addEventListener('visibilitychange', (e) => {
+
+
+            if (ad === 'ad1') {
+                const timerId = setInterval(() => {
+                    const {
+                        state: { countFromSecond: seconds }
+                    } = this;
+
+                    if (seconds > 0) {
                         this.setState({
-                            timerId
+                            countFromSecond: seconds - 1,
+                            status: 'Wait for '
+
                         });
-                
-        
+                    } else {
+                        this.setState({
+                            countFromSecond: 20,
+                            timerId: 0,
+                            ad1: true
+                        })
+                        clearInterval(this.state.timerId);
+                    }
+                }, 1000);
+
+                this.setState({
+                    timerId
+                });
             }
-        
+
+
+
+        }
+
         )
     };
 
