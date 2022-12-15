@@ -204,7 +204,7 @@ class MyAccount extends Component {
                     <p>₹ {(this.state.balance).toFixed(2)}</p>
                   </div>
                   <div className='d-md-flex d-block'>
-                    <span><b>UPI ID:</b></span>
+                    <span><b>GPay/PhonePe Number:</b></span>
                     {(this.state.upiID === 0) ?
                       <div className='ms-md-2 ms-0'>
                         <input type='text' placeholder='Add UPI ID' id='upi__id' />
