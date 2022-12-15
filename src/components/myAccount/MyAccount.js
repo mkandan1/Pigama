@@ -38,7 +38,7 @@ class MyAccount extends Component {
   addUpiId(){
     const upiId = document.getElementById('upi__id').value;
 
-    if(this.validateUpiId(upiId)=== false){
+    if(this.validateNumber(upiId)=== false){
       return
     }
 
@@ -68,19 +68,17 @@ class MyAccount extends Component {
 
   }
 
-  validateUpiId(id){
-    const reg = /[a-zA-Z0-9.\-_]{2,49}@[a-zA-Z._]{2,49}/;
-    if(reg.test(id)===false){
-      document.getElementById('upi-error').innerText = 'Invalid UPI ID'
-      document.getElementById('upi-error').style.color = 'red'
-      return false
+   validateNumber(number) {
+    const reg = /^(?:(?:\+|0{0,2})91(\s*[-]\s*)?|[0]?)?[6789]\d{9}$/;
+    if (reg.test(number) === false) {
+        document.getElementById('number-error').innerText = 'Enter valid number'
+        return false
     }
-    else{
-      document.getElementById('upi-error').innerText = ''
-      document.getElementById('upi-error').style.color = ''
-      return true
+    else {
+        document.getElementById('number-error').innerText = ''
+        return true
     }
- }
+}
 
   fetchUserDetails() {
 
