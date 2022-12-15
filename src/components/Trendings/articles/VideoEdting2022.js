@@ -97,43 +97,35 @@ class VideoEditing2022 extends Component {
         })
     }
 
-    // TODO: use the requestAnimationFrame
-    startTimer = (ad) => {
-        document.addEventListener('visibilitychange', (e) => {
+     // TODO: use the requestAnimationFrame
+     startTimer = (ad) => {
+        if (ad === 'ad1') {
+            const timerId = setInterval(() => {
+                const {
+                    state: { countFromSecond: seconds }
+                } = this;
 
+                if (seconds > 0) {
+                    this.setState({
+                        countFromSecond: seconds - 1,
+                        status: 'Wait for '
 
-            if (ad === 'ad1') {
-                const timerId = setInterval(() => {
-                    const {
-                        state: { countFromSecond: seconds }
-                    } = this;
+                    });
+                } else {
+                    this.setState({
+                        countFromSecond: 32,
+                        timerId: 0,
+                        ad1: true
+                    })
+                    clearInterval(this.state.timerId);
+                }
+            }, 1000);
 
-                    if (seconds > 0) {
-                        this.setState({
-                            countFromSecond: seconds - 1,
-                            status: 'Wait for '
-
-                        });
-                    } else {
-                        this.setState({
-                            countFromSecond: 32,
-                            timerId: 0,
-                            ad1: true
-                        })
-                        clearInterval(this.state.timerId);
-                    }
-                }, 1000);
-
-                this.setState({
-                    timerId
-                });
-            }
-
-
-
+            this.setState({
+                timerId
+            });
         }
 
-        )
     };
 
     render() {
