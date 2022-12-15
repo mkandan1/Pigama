@@ -79,7 +79,7 @@ class VideoEditing extends Component {
         const auth = getAuth(config);
         onAuthStateChanged(auth, (user) => {
             const uid = user.uid;
-            const creditAmount = 0.30
+            const creditAmount = 0.35
 
             const data = { uid: uid, creditAmount: creditAmount }
 
