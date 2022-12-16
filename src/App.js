@@ -14,7 +14,7 @@ import MyAccountMiddleWare from './components/myAccount/myAccountMiddleWare';
 import MyAccount from './components/myAccount/MyAccount';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import config from './config';
-import Ad from './components/Trendings/Ad/Ad
+import Ad from './components/Trendings/Ad/Ad'
 import VideoEditing from './components/Trendings/articles/videoEditing'
 import VideoEditingTips from './components/Trendings/articles/VideoEditingTips'
 import VideoEditing2022 from './components/Trendings/articles/VideoEdting2022'
