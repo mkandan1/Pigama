@@ -15,10 +15,6 @@ document.body.appendChild(script)
 
 class Ad extends Component {
 
-    render() {
-        return (
-            
-        )
-    }
+    
 }
 export default Ad
