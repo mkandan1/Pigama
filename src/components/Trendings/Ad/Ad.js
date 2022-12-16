@@ -17,7 +17,7 @@ class Ad extends Component {
 
     render() {
         return (
-            <div>Ad</div>
+            
         )
     }
 }
