@@ -155,7 +155,10 @@ class VideoEditingTips extends Component {
                         <h1>Video Editing Tips</h1>
                         <span className='mt-2'><b>Published on:</b> 12-12-2022</span><span className='mt-2 d-block'><b>Author:</b> Looficats</span>
                     </div>
-
+<div className='d-flex justify-content-center ratio ratio-16x9'>
+                    <iframe src='/ad' title='ad1'>
+                    </iframe>
+                </div>
                     <div className='section__1 mt-5'>
 
                         <p>
@@ -163,7 +166,10 @@ class VideoEditingTips extends Component {
                             Organize your footage. “You have to be organized,” says Tiffani Bauer, video producer at Descript. “Starting off by organizing your stuff straight out of the camera is great.” Keeping your video clips in order will allow you to quickly find the pieces you need when you need them. Decide on a management strategy and file structure, and keep it consistent. Create folders for your project on your device and make subfolders for your raw clips depending on their type, or where they belong in your edit.
                             Make a plan. It doesn’t have to be overly elaborate, but you should have a good idea about what your project will look and sound like. Create an outline of your vision, or better yet, make a shot list detailing the visual and the audio components of every scene. If you want to include voice over or narration, write a script by outlining the points you want to make, then writing them out to sound natural. Read it out, make adjustments, and repeat until it sounds right. Keep your writing concise, and make sure that whoever is reading the script practices in advance.
                         </p>
-
+<div className='d-flex justify-content-center ratio ratio-16x9'>
+                    <iframe src='/ad' title='ad1'>
+                    </iframe>
+                </div>
 
 
                         {/* <video id="vide-ad">
