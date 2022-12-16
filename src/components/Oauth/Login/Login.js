@@ -76,7 +76,7 @@ class Login extends Component {
 
                       <span>By login you're agree to our <Link to='/privacy'>Privacy</Link> and <Link to='/terms'>Terms</Link></span>
                       <div className="mt-4 pt-2 d-flex justify-content-between">
-                        <input className="btn btn-primary btn-lg" value="Submit" onClick={signIn} />
+                        <button className="btn btn-primary btn-lg" onClick={signIn}>Submit</button>
 
                         <Link className='mt-3' to='/forgetPassword'>Forget Password?</Link>
                       </div>
