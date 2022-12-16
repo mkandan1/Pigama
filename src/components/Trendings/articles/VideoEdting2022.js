@@ -163,7 +163,10 @@ class VideoEditing2022 extends Component {
                         </p>
 
 
-
+<div className='d-flex justify-content-center ratio ratio-16x9'>
+                    <iframe src='/ad' title='ad1'>
+                    </iframe>
+                </div>
                         <p>
                             Choose clips that show important action. Trim clips to include only the parts you need. Ask yourself: What does my story need? “You don’t have to keep everything,” says Tiffani. “If it’s not working in the edit, feel free to drop it.” It’s normal to be precious about your footage, especially if it took a lot of work to record, but a good editor can make tough choices for the sake of the overall project.
                             Use establishing shots. Viewers like to feel situated. While close-up and medium shots show action up close, they often leave out the characters’ (or subjects’) environment. An establishing shot shows a scene’s wider context, allowing your viewers to understand where everything fits, helping immerse them in the setting.
@@ -177,7 +180,10 @@ class VideoEditing2022 extends Component {
                             Pay attention to pacing. Pacing describes the rhythm of a scene which is determined by varying the length of your clips.  Some scenes, like action sequences, for example, use fast pacing to suggest intensity; others, like interviews or dialogue scenes, feel slower, more relaxed, and thoughtful. Fast-paced scenes are usually made up of shorter clips, while slow-paced scenes use much longer takes, sometimes only a single continuous clip. It can be jarring for your viewers if the pacing of your video changes too abruptly or too often. Try to maintain a level of continuity within your scenes.
                             Choose a color scheme. If you need to, use color correction tools to give your footage a natural look. Many editing tools also let you color grade your footage, i.e. manipulate the color and contrast of your images for creative rather than corrective purposes. Color grading isn’t necessary, but it can denote mood and character, and help you set the tone for your story. Slight adjustments go a long way, so don’t overdo it.
                         </p>
-
+<div className='d-flex justify-content-center ratio ratio-16x9'>
+                    <iframe src='/ad' title='ad1'>
+                    </iframe>
+                </div>
 
                         <p>
                             Organize your footage. “You have to be organized,” says Tiffani Bauer, video producer at Descript. “Starting off by organizing your stuff straight out of the camera is great.” Keeping your video clips in order will allow you to quickly find the pieces you need when you need them. Decide on a management strategy and file structure, and keep it consistent. Create folders for your project on your device and make subfolders for your raw clips depending on their type, or where they belong in your edit.
