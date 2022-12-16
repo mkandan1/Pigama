@@ -153,6 +153,10 @@ class VideoEditing2022 extends Component {
                         <h1>Video Editing Tips</h1>
                         <span className='mt-2'><b>Published on:</b> 12-12-2022</span><span className='mt-2 d-block'><b>Author:</b> Looficats</span>
                     </div>
+<div className='d-flex justify-content-center ratio ratio-16x9'>
+                    <iframe src='/ad' title='ad1'>
+                    </iframe>
+                </div>
 
                     <div className='section__1 mt-5'>
 
